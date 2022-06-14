@@ -1,6 +1,0 @@
-black ./
-black --check ./
-
-flake ./
-
-isort --check-only ./
