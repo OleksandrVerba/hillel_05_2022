@@ -1,0 +1,18 @@
+filename = "lesson_4_iter_gener_functions//homework//rockyou.txt"
+search_keyword = "user"
+
+
+def read_lines_find_user_generator() -> list[str]:
+    results = []
+    with open(filename, encoding="CP1251") as file:
+        while line := file.readline():
+            if search_keyword in line:
+                filtered_line = line.replace("\n", "")
+                iser_input = input(f"Save {filtered_line}? [Y/N]")
+                if user_input == "Y":
+                    results.append(filtered_line)
+        return results
+
+
+results: list[str] = read_lines_find_user_generator()
+print(results)
